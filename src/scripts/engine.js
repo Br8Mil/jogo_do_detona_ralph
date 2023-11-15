@@ -25,12 +25,12 @@ function countDown() {
     clearInterval(state.actions.countDownTimerId);
     clearInterval(state.actions.timerId);
     alert("Game Over! O seu resultado foi: " + state.values.result);
+    location.reload()
   }
 }
 
 function playSound(audioName) {
   let audio = new Audio(`./src/audios/${audioName}.m4a`);
-  audio.volume = 0.2;
   audio.play();
 }
 
